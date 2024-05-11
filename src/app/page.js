@@ -1,19 +1,24 @@
 import styles from "./page.module.css";
-import Recipes from "./posts/page.jsx";
+import { sql } from "@vercel/postgres";
 
-// export default function Home() {
-//   return {
-//     <div>
-//     <h1>This is my homepage</h1>
-//     </div>
-//   };
-// }
+export default async function Home() {
+  const posts = await sql`SELECT * FROM posts`;
+  //console.log(posts);
 
-export default function Home() {
   return (
     <div>
-      <h1>Title goes here</h1>
-      <Recipes />
+      <h1>Recipes</h1>
+      <button></button>
+
+      <ul>
+        {posts.rows.map((post) => (
+          <ul key={`${post.id}-${post.posttitle}-${post.posttext}`}>
+            <h2>{post.posttitle}</h2>
+            <p>{post.posttext}</p>
+            <button></button>
+          </ul>
+        ))}
+      </ul>
     </div>
   );
 }
