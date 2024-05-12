@@ -13,13 +13,15 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <header>
-          On the eight day he created a header, but didn't have time to style it{" "}
+          On the eight day he created a header, but didn&apos;t have time to
+          style it{" "}
         </header>
 
         {children}
 
         <footer>
-          On the ninth day he created a footer, but didn't have time to style it
+          On the ninth day he created a footer, but didn&apos;t have time to
+          style it
         </footer>
       </body>
     </html>
