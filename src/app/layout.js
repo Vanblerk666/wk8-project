@@ -12,11 +12,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <header>On the eight day he created a header </header>
+        <header>
+          On the eight day he created a header, but didn't have time to style it{" "}
+        </header>
 
         {children}
 
-        <footer>On the ninth day he created a footer</footer>
+        <footer>
+          On the ninth day he created a footer, but didn't have time to style it
+        </footer>
       </body>
     </html>
   );

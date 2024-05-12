@@ -1,7 +1,8 @@
-import styles from "./page.module.css";
+"use server";
+
 import { sql } from "@vercel/postgres";
 
-export default async function Home() {
+export default async function Posts() {
   const posts = await sql`SELECT * FROM posts`;
   //console.log(posts);
 
